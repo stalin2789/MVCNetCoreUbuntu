@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Demo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles
+{
+    <style>
+        @* Agregaria aqui mis estilos *@
+        
+    </style>
+}
+
+<h2>Demo inicio</h2>
+
+<p>Hello from our View Template!</p>
+
+@* Script deberia estar despues de los archivos creados 
+de esta forma aparece antes que todos los scripts:
+
+Se soluciona poniendo en el _Layout al final de todos los scripts un:
+
+@RenderSection("scripts", required: false)
+
+*@
+
+@section scripts
+{
+<script>
+    alert("Que onda!");
+</script>
+
+}
+
